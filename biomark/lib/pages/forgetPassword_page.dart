@@ -64,7 +64,13 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
       print('Error checking email in Firestore: $e');
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
-          content: Text('Failed to send reset link. Please try again later.'),
+          content: Text(
+            'Failed to send reset link. Please try again later.',
+            style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+          backgroundColor: Colors.white,
+          behavior: SnackBarBehavior.floating,
+          duration: Duration(seconds: 3)
         ),
       );
     } finally {

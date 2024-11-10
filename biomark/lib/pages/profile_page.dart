@@ -31,7 +31,14 @@ class ProfilePage extends StatelessWidget {
         await querySnapshot.docs.first.reference.delete();
 
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('You have been unsubscribed.')),
+          const SnackBar(content: Text(
+            'You have been unsubscribed.',
+            style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+          backgroundColor: Colors.white,
+          behavior: SnackBarBehavior.floating,
+          duration: Duration(seconds: 3)
+          ),
         );
 
         Navigator.pushReplacement(
@@ -40,12 +47,26 @@ class ProfilePage extends StatelessWidget {
         );
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('User not found.')),
+          const SnackBar(content: Text(
+            'User not found.',
+            style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+          backgroundColor: Colors.white,
+          behavior: SnackBarBehavior.floating,
+          duration: Duration(seconds: 3)
+          ),
         );
       }
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Error: $e')),
+        SnackBar(content: Text(
+          'Error: $e',
+            style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+          backgroundColor: const Color.fromARGB(255, 193, 6, 6),
+          behavior: SnackBarBehavior.floating,
+          duration: Duration(seconds: 3)
+          ),
       );
     }
   }

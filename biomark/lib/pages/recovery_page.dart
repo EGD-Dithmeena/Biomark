@@ -141,7 +141,14 @@ class _RecoveryPageState extends State<RecoveryPage> {
         });
 
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Password reset successfully!')),
+          const SnackBar(content: Text(
+            'Password reset successfully!',
+            style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+          backgroundColor: Colors.white,
+          behavior: SnackBarBehavior.floating,
+          duration: Duration(seconds: 3)
+          ),
         );
 
         Navigator.pushReplacement(

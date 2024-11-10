@@ -49,14 +49,28 @@ class _UpdatePasswordPageState extends State<UpdatePasswordPage> {
 
       // After updating, navigate back to the login page or show success message
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Password successfully updated!')),
+        const SnackBar(content: Text(
+          'Password successfully updated!',
+            style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+          backgroundColor: Colors.white,
+          behavior: SnackBarBehavior.floating,
+          duration: Duration(seconds: 3)
+          ),
       );
 
       Navigator.pop(context); // Go back to the login page
     } catch (e) {
       print('Error updating password: $e');
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Failed to update password. Please try again later.')),
+        const SnackBar(content: Text(
+          'Failed to update password. Please try again later.',
+            style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+          backgroundColor: Colors.white,
+          behavior: SnackBarBehavior.floating,
+          duration: Duration(seconds: 3)
+          ),
       );
     } finally {
       setState(() {

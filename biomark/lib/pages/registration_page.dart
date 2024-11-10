@@ -127,8 +127,13 @@ void _submitForm() async {
 
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
-          content: Text('User Registered Successfully!'),
-          duration: Duration(seconds: 2),
+          content: Text(
+            'User Registered Successfully!',
+            style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+          backgroundColor: Colors.white,
+          behavior: SnackBarBehavior.floating,
+          duration: Duration(seconds: 3)
         ),
       );
 
@@ -147,8 +152,13 @@ void _submitForm() async {
       print('Failed to register user: $error');
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('Failed to register user: $error'),
-          duration: const Duration(seconds: 3),
+          content: Text(
+            'Failed to register user: $error',
+            style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+          backgroundColor: Colors.white,
+          behavior: SnackBarBehavior.floating,
+          duration: Duration(seconds: 3)
         ),
       );
     }
