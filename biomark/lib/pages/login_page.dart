@@ -4,7 +4,7 @@ import 'dart:convert';
 import 'package:crypto/crypto.dart';
 import 'package:biomark/pages/profile_page.dart';
 import 'package:biomark/pages/registration_page.dart';
-import 'package:biomark/pages/forgetPassword_page.dart';
+import 'package:biomark/pages/forget_password_page.dart';
 import 'package:biomark/pages/recovery_page.dart';
 
 class LoginPage extends StatefulWidget {

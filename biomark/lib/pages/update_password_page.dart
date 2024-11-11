@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:biomark/pages/login_page.dart';
 
 class UpdatePasswordPage extends StatefulWidget {
   final String userId; // Pass the user ID to identify the user for password update
@@ -193,6 +194,24 @@ class _UpdatePasswordPageState extends State<UpdatePasswordPage> {
                                 fontSize: 15,
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+
+                          // Back to Login Link
+                          const SizedBox(height: 20),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(builder: (context) => const LoginPage()),
+                              );
+                            },
+                            child: const Text(
+                              "Back to Login",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
                               ),
                             ),
                           ),

@@ -352,6 +352,25 @@ class _RecoveryPageState extends State<RecoveryPage> {
                               ),
                             ),
                           ),
+
+                          // Back to Login Link
+                          const SizedBox(height: 20),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(builder: (context) => const LoginPage()),
+                              );
+                            },
+                            child: const Text(
+                              "Back to Login",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                          
                         ],
                       ),
                     ),

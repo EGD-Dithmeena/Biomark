@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:biomark/pages/updatePassword_page.dart'; // Make sure to import UpdatePasswordPage
+import 'package:biomark/pages/update_password_page.dart'; // Make sure to import UpdatePasswordPage
 
 class ForgetPasswordPage extends StatefulWidget {
   const ForgetPasswordPage({super.key});

@@ -61,11 +61,11 @@ class ProfilePage extends StatelessWidget {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text(
           'Error: $e',
-            style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+            style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
           ),
           backgroundColor: const Color.fromARGB(255, 193, 6, 6),
           behavior: SnackBarBehavior.floating,
-          duration: Duration(seconds: 3)
+          duration: const Duration(seconds: 3)
           ),
       );
     }
@@ -89,7 +89,7 @@ class ProfilePage extends StatelessWidget {
           Column(
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 10.0),
+                padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 60.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -154,7 +154,7 @@ class ProfilePage extends StatelessWidget {
                                 'Welcome to your profile!',
                                 style: TextStyle(fontSize: 24, color: Colors.white),
                               ),
-                              const SizedBox(height: 30),
+                              const SizedBox(height: 100),
 
                               Table(
                                 columnWidths: const {

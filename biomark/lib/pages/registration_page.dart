@@ -154,11 +154,11 @@ void _submitForm() async {
         SnackBar(
           content: Text(
             'Failed to register user: $error',
-            style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),
+            style: const TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),
           ),
           backgroundColor: Colors.white,
           behavior: SnackBarBehavior.floating,
-          duration: Duration(seconds: 3)
+          duration: const Duration(seconds: 3)
         ),
       );
     }
